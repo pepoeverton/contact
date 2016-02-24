@@ -10,6 +10,15 @@ module.exports = function(){
   controller.listaContatos = function(req, res){
         res.json(contatos);
   };
+  controller.getContato = function(req, res){
+    var id = req.params.id;
+    var contato = contatos.filter(function(contato){
+      return contato._id == id;
+    })[0];
+
+    contato ? res.json(contato) : res.status('contato não encontrado');
+
+  }
 
   return controller;
 }
