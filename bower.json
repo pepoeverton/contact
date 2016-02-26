@@ -1,7 +1,7 @@
 {
   "name": "contact",
   "description": "'aplicacao de contatos, utilizando MEAN Stack'",
-  "main": "index.js",
+  "main": "server.js",
   "authors": [
     "Everton Nunes <everton.code@gmail.com>"
   ],
