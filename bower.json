@@ -1,0 +1,24 @@
+{
+  "name": "contato",
+  "description": "'aplicacao de contatos, utilizando MEAN Stack'",
+  "main": "index.js",
+  "authors": [
+    "Everton Nunes <everton.code@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/everton08/contact",
+  "moduleType": [],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.5.0",
+    "bootstrap": "^3.3.6",
+    "angular-route": "^1.5.0",
+    "angular-resource": "^1.5.0"
+  }
+}
