@@ -1,5 +1,5 @@
 {
-  "name": "contato",
+  "name": "contact",
   "description": "'aplicacao de contatos, utilizando MEAN Stack'",
   "main": "index.js",
   "authors": [
