@@ -3,14 +3,16 @@
   <head>
     <meta charset="utf-8">
     <title>Contact</title>
+    <link rel="stylesheet" href="vendor/bootstrap/dist/css/bootstrap.min.css" media="screen" charset="utf-8">
+    <link rel="stylesheet" href="vendor/bootstrap/dist/css/bootstrap-theme.css" media="screen" charset="utf-8">
   </head>
-  <body ng-controller="ContactController">
-    <h1>Contact</h1>
-    <button type="button" name="button">Novo</button>
-    <p>Contatos cadastrados: {{total}}</p>
+  <body class="container">
+    <div ng-view></div>
 
     <script src="vendor/angular/angular.min.js"></script>
+    <script src="vendor/angular-route/angular-route.min.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/controllers/ContactsController.js"></script>
     <script src="js/controllers/ContactController.js"></script>
   </body>
 </html>
