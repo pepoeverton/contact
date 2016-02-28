@@ -1,8 +1,8 @@
 {
   "name": "contact",
   "version": "1.0.0",
-  "description": "'aplicacao de contatos, utilizando MEAN Stack'",
-  "main": "index.js",
+  "description": "'aplicacao de contatos utilizando MEAN Stack'",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
