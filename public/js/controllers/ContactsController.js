@@ -1,6 +1,6 @@
 angular.module('contact').controller('ContactsController', function($scope, $resource){
   $scope.contatos = [];
-
+  $scope.mensagem = {texto: ''};
   $scope.filtro = '';
 
   var Contato = $resource('/contatos/:id');
@@ -9,9 +9,12 @@ angular.module('contact').controller('ContactsController', function($scope, $res
     Contato.query(
         function(contatos){
           $scope.contatos = contatos;
+          $scope.mensagem = {};
         },
         function(erro){
-          console.log("Não foi possível obter a lista de contatos");
+          $scope.mensagem = {
+            texto: "Não foi possível obter a lista de contatos"
+          };
           consoe.log(erro);
         }
     );
@@ -22,7 +25,9 @@ angular.module('contact').controller('ContactsController', function($scope, $res
     Contato.delete({id: contato._id},
       getContatos,
       function(erro){
-        console.log("não foi possível remover o contato");
+        $scope.mensagem = {
+          texto: "Não foi possível remover o contato"
+        };
         console.log(erro);
       }
     );

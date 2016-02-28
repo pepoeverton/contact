@@ -1,6 +1,9 @@
 <div class="jumbotron">
   <h1 class="text-center">Bem-vindo ao Contact</h1>
 </div>
+<p ng-show="mensagem.texto">
+  {{mensagem.texto}}
+</p>
 <button type="button" name="button" class="btn btn-primary" ng-click="">Novo</button>
 <input ng-model="filtro" type="search" name="name" placeholder="parte do nome">
 <p>Contatos cadastrados: {{contatos.length}}</p>
