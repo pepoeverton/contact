@@ -4,7 +4,7 @@
 <p ng-show="mensagem.texto">
   {{mensagem.texto}}
 </p>
-<button type="button" name="button" class="btn btn-primary" ng-click="">Novo</button>
+<a ng-href="#/contato" class="btn btn-primary">Novo Contato</a>
 <input ng-model="filtro" type="search" name="name" placeholder="parte do nome">
 <p>Contatos cadastrados: {{contatos.length}}</p>
 <p class="text-info" ng-hide="contatos.lenght">
@@ -19,7 +19,7 @@
     </tr>
     <tr ng-repeat="contato in contatos | filter:filtro">
       <td>
-        <a href="#">{{contato.nome}}</a>
+        <a ng-href="#/contato/{{contato._id}}">{{contato.nome}}</a>
       </td>
       <td>{{contato.email}}</td>
       <td class="text-center">

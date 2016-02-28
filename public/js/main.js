@@ -5,7 +5,11 @@ angular.module('contact', ['ngRoute', 'ngResource'])
         templateUrl: 'partials/contatos.html',
         controller: 'ContactsController'
     });
-    $routeProvider.when('/contato/:contactId',{
+    $routeProvider.when('/contato/:id',{
+        templateUrl: 'partials/contato.html',
+        controller: 'ContactController'
+    });
+    $routeProvider.when('/contato',{
         templateUrl: 'partials/contato.html',
         controller: 'ContactController'
     });
