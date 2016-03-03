@@ -1,9 +1,9 @@
-angular.module('contact').controller('ContactsController', function($scope, $resource){
+angular.module('contact').controller('ContactsController', function($scope, $resource, Contato){
   $scope.contatos = [];
   $scope.mensagem = {texto: ''};
   $scope.filtro = '';
 
-  var Contato = $resource('/contatos/:id');
+  //var Contato = $resource('/contatos/:id');
 
   function getContatos(){
     Contato.query(
