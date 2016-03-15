@@ -24,7 +24,7 @@ angular.module('contact').controller('ContactController', function($scope, $rout
     $scope.contato.$save()
       .then(function(){
         $scope.mensagem = {
-          texto: "Salvo com suecsso!"
+          texto: "Salvo com sucesso!"
         },
         $scope.contato = new Contato();
       })
