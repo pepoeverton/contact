@@ -3,7 +3,8 @@ var express = require('express'),
     bodyParser = require('body-parser'),
     cookieParser = require('cookie-parser'),
     session = require('express-session'),
-    passport = require('passport');
+    passport = require('passport'),
+    helmet = require('helmet');
 
 module.exports = function(){
   var app = express();
@@ -25,6 +26,11 @@ module.exports = function(){
   ));
   app.use(passport.initialize());
   app.use(passport.session());
+  app.use(helmet());
+  app.use(helmet.xframe());
+  app.use(helmet.xssFilter());
+  app.use(helmet.nosniff());
+  app.disable('x-powered-by');
 
   load('models', {cwd: 'app'})
     .then('controllers')
