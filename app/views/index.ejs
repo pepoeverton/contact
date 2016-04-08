@@ -7,11 +7,14 @@
     <link rel="stylesheet" href="vendor/bootstrap/dist/css/bootstrap-theme.css" media="screen" charset="utf-8">
   </head>
   <body class="container">
+    <%if(usuarioLogado.length > 0) { %>
     <div class="text-right">
       <p>Logado como:
         <span id="usuario-logado"><%=usuarioLogado %></span>
+        <a href="/logout">Logout</a>
       </p>
     </div>
+    <% } %>
     <div ng-view></div>
     <script src="vendor/angular/angular.min.js"></script>
     <script src="vendor/angular-route/angular-route.min.js"></script>
