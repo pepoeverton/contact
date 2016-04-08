@@ -7,8 +7,12 @@
     <link rel="stylesheet" href="vendor/bootstrap/dist/css/bootstrap-theme.css" media="screen" charset="utf-8">
   </head>
   <body class="container">
+    <div class="text-right">
+      <p>Logado como:
+        <span id="usuario-logado"><%=usuarioLogado %></span>
+      </p>
+    </div>
     <div ng-view></div>
-
     <script src="vendor/angular/angular.min.js"></script>
     <script src="vendor/angular-route/angular-route.min.js"></script>
     <script src="vendor/angular-resource/angular-resource.min.js"></script>
